@@ -1,0 +1,26 @@
+<h1>Rate My Course</h1>
+<h2>Courses:</h2>
+{{#each courses as |c|}}
+    course: 
+    <li>
+       id: {{id}}<br>
+       name: {{name}}<br>
+       description: {{description}}<br>
+       credit: {{credit}}<br>
+       location: {{location}}<br>
+       professor: {{professor}}<br>
+       prerequisite: {{prerequisite}}<br>
+       review: {{review}}<br>
+    </li>
+{{/each}}
+<form action="/add" method="POST">
+    ID: <input type="text" name="id"><br>
+    Name: <input type="text" name="name"><br>
+    Description: <input type="text" name="description"><br>
+    Credit: <input type="text" name="credit"><br>
+    Location: <input type="text" name="location"><br>
+    Professor: <input type="text" name="professor"><br>
+    Prerequisite: <input type="text" name="prerequisite"><br>
+    Review: <input type="text" name="review"><br>
+    <input type="submit">
+</form>
